@@ -1,3 +1,6 @@
+import Link from 'next/link';
+
+
 const categories = [
   "Food",
   "Toiletries",
@@ -24,7 +27,11 @@ export default function Home() {
 
      <ul>
       <h1 className="text-xl">Search by Category:</h1>
-      {categories.map((category, i) => <li key={category+i} className="text-xl text-sky-700">{category}</li>)}
+      {categories.map((category, i) => 
+      { return (<Link href="/categories/">
+      <li key={category+i} className="text-xl text-sky-700">{category}</li>
+      </Link>)}
+      )}
      </ul>
      <div className="text-lg text-center pt-2 p-4">Because the groceries won't buy themselves</div>
     </main>
