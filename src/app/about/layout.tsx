@@ -1,4 +1,4 @@
-import styles from "./styles.module.css"
+import styles from './styles.module.css';
 import Link from 'next/link';
 
 export default function AboutLayout({
@@ -8,12 +8,10 @@ export default function AboutLayout({
 }>) {
   return (
     <>
-        <nav>
-            <Link href="/">Link to Homepage</Link>
-        </nav>
-        <main className={styles.main}>
-            {children}
-        </main>
+      <nav>
+        <Link href='/'>Link to Homepage</Link>
+      </nav>
+      <main className={styles.main}>{children}</main>
     </>
-  )
+  );
 }
